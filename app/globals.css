@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Esto asegura que los estilos base se carguen correctamente en v4 */
+@theme {
+  --font-sans: var(--font-inter);
+}
