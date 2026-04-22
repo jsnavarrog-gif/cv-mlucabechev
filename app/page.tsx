@@ -53,16 +53,20 @@ export default function CVMarcela() {
             <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-2">
               Senior Supply Chain & Demand Planning
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">
-              Marcela <span className="text-cyan-500">Lucabeche Vera</span>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
+              Marcela <span className="text-cyan-500">Lucabeche V.</span>
             </h1>
             <p className="text-slate-400 text-lg font-light max-w-2xl leading-relaxed">
-              Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas. Actúo como puente estratégico entre Comercial, Operaciones y Finanzas.
+              Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas.<br/>Actúo como puente estratégico entre Comercial, Operaciones y Finanzas.
             </p>
             <div className="flex flex-wrap gap-6 pt-4 text-sm text-slate-400">
-              <span className="flex items-center gap-2"><Mail size={16} className="text-cyan-500"/> marce.lucabeche@gmail.com</span>
+              <a href="mailto:marce.lucabeche@gmail.com" className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition border border-slate-700">
+                <Mail size={18} /> marce.lucabeche@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/marcelalucabechev" target="_blank" className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg transition border border-slate-700">
+                <Link size={18} /> LinkedIn
+              </a>
               <span className="flex items-center gap-2"><MapPin size={16} className="text-cyan-500"/> Santiago, Chile</span>
-              <span className="flex items-center gap-2"><Link size={16} className="text-cyan-500"/> https://www.linkedin.com/in/marcelalucabechev</span>
             </div>
           </div>
           <div className="mt-8 md:mt-0">
@@ -74,7 +78,7 @@ export default function CVMarcela() {
             <a 
               href="/CV_MarcelaLucabecheV.pdf" 
               download
-              className="group flex items-center gap-3 bg-white text-slate-900 px-6 py-4 rounded-none font-black uppercase text-sm hover:bg-cyan-500 transition-all shadow-[6px_6px_0px_0px_rgba(6,182,212,1)]"
+              className="group flex items-center gap-3 bg-white text-slate-900 px-6 py-4 rounded-none font-black uppercase text-xs hover:bg-cyan-500 transition-all shadow-[6px_6px_0px_0px_rgba(6,182,212,1)]"
             >
               <FileText size={20}/> Descargar CV<ChevronRight size={18} className="group-hover:translate-x-1 transition-transform"/>
             </a>
@@ -89,7 +93,7 @@ export default function CVMarcela() {
           </div>
           <div className="p-6 text-center">
             <p className="text-3xl font-black text-slate-900">10+ Años</p>
-            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Industria Crítica [cite: 4]</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Industria Crítica</p>
           </div>
           <div className="p-6 text-center">
             <p className="text-3xl font-black text-slate-900">6 Países</p>
@@ -97,7 +101,7 @@ export default function CVMarcela() {
           </div>
           <div className="p-6 text-center">
             <p className="text-3xl font-black text-slate-900">E2E</p>
-            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Visión de Negocio [cite: 8]</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Visión de Negocio</p>
           </div>
         </div>
 
@@ -105,7 +109,7 @@ export default function CVMarcela() {
           {/* BARRA LATERAL: DOMINIO TÉCNICO */}
           <div className="md:col-span-4 bg-slate-50 p-10 border-r border-slate-100">
             <section className="mb-12">
-              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Core Expertise [cite: 54]</h2>
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Core Expertise</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="mt-1 bg-white p-2 rounded shadow-sm"><BarChart3 size={18} className="text-cyan-600"/></div>
@@ -125,14 +129,14 @@ export default function CVMarcela() {
                   <div className="mt-1 bg-white p-2 rounded shadow-sm"><Globe2 size={18} className="text-cyan-600"/></div>
                   <div>
                     <h4 className="font-bold text-slate-800 text-sm">Foreign Trade</h4>
-                    <p className="text-xs text-slate-500 leading-tight">Sourcing internacional y cumplimiento normativo aduanero[cite: 14].</p>
+                    <p className="text-xs text-slate-500 leading-tight">Sourcing internacional y cumplimiento normativo aduanero.</p>
                   </div>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Herramientas Clave [cite: 50, 52]</h2>
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Herramientas Clave</h2>
               <div className="flex flex-wrap gap-2">
                 <SkillTag name="SAP (APO/SCM)" />
                 <SkillTag name="OMP" />
@@ -172,28 +176,28 @@ export default function CVMarcela() {
                 role="Senior Planning Analyst / Cluster Lead"
                 company="Roche Chile / Ecolab"
                 period="2019 — 2024"
-                description="Liderazgo regional del proyecto S&OP 2.0 para el clúster sur (6 países). Optimización de forecasting mediante Machine Learning y SAP/APO, garantizando la salud financiera de inventarios críticos[cite: 31, 32]."
+                description="Liderazgo regional del proyecto S&OP 2.0 para el clúster sur (6 países). Optimización de forecasting mediante Machine Learning y SAP/APO, garantizando la salud financiera de inventarios críticos."
               />
 
               <ExperienceItem 
                 role="Gestor de Abastecimiento & Forecast"
                 company="Empack S.A."
                 period="2024 — 2025"
-                description="Integración de modelos B2B y B2C, reduciendo la incertidumbre operativa y alineando la operación logística con la necesidad del cliente final[cite: 17, 19]."
+                description="Integración de modelos B2B y B2C, reduciendo la incertidumbre operativa y alineando la operación logística con la necesidad del cliente final."
               />
 
               <ExperienceItem 
                 role="Consultora Senior Supply Chain"
                 company="Freelance Autónomo"
                 period="2025 — Actualidad"
-                description="Consultoría estratégica enfocada en precisión del forecast e integración comercial-operativa. Gestión técnica superior en sourcing internacional y reducción de costos logísticos[cite: 12, 14]."
+                description="Consultoría estratégica enfocada en precisión del forecast e integración comercial-operativa. Gestión técnica superior en sourcing internacional y reducción de costos logísticos."
               />
               
               <ExperienceItem 
                 role="Encargada de Comercio Exterior"
                 company="Novaverde (Guallarauco)"
                 period="2011 — 2016"
-                description="Negociación global con proveedores internacionales y optimización integral de presupuestos anuales del departamento de importaciones[cite: 42, 43]."
+                description="Negociación global con proveedores internacionales y optimización integral de presupuestos anuales del departamento de importaciones."
               />
             </section>
 
@@ -202,7 +206,7 @@ export default function CVMarcela() {
               <Boxes className="mx-auto text-cyan-500 mb-4" size={32} />
               <h3 className="text-lg font-bold text-slate-800 mb-2">¿Buscas optimizar tu Cadena de Suministro?</h3>
               <p className="text-sm text-slate-600 mb-6 max-w-md mx-auto">
-                Especialista en transformar datos complejos en decisiones de negocio rentables y procesos operativos fluidos[cite: 5, 8].
+                Especialista en transformar datos complejos en decisiones de negocio rentables y procesos operativos fluidos.
               </p>
               <div className="flex justify-center gap-4">
                 <a href="mailto:contacto@marcelalucabeche.cl" className="text-xs font-black uppercase tracking-widest text-cyan-600 hover:text-cyan-700 underline">Agendar Reunión</a>
