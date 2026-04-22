@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Mail, 
-  Linkedin, 
+  Link, 
   Globe, 
   FileText, 
   MapPin, 
