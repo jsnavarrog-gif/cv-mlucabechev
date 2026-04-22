@@ -1,9 +1,7 @@
 import React from 'react';
 import { 
   Mail, 
-  Linkedin, 
-  Globe, 
-  FileText, 
+  Link, 
   MapPin, 
   BarChart3, 
   Truck, 
@@ -11,10 +9,12 @@ import {
   TrendingUp, 
   PackageSearch, 
   GanttChart,
-  ChevronRight
+  ChevronRight,
+  FileText,
+  Boxes
 } from 'lucide-react';
 
-// --- INTERFACES (Para que Vercel no dé error de TypeScript) ---
+// --- INTERFACES ---
 interface ExperienceProps {
   company: string;
   role: string;
@@ -26,104 +26,193 @@ interface SkillTagProps {
   name: string;
 }
 
-// --- COMPONENTES AUXILIARES ---
+// --- COMPONENTES ---
 const ExperienceItem = ({ company, role, period, description }: ExperienceProps) => (
-  <div className="mb-8 border-l-2 border-emerald-500 pl-4">
-    <h3 className="text-xl font-bold text-slate-800">{role}</h3>
-    <p className="text-emerald-600 font-medium">{company} | {period}</p>
-    <p className="text-slate-600 mt-2">{description}</p>
+  <div className="mb-10 relative pl-8 border-l-2 border-slate-200 hover:border-cyan-500 transition-colors group">
+    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-slate-300 group-hover:border-cyan-500 transition-colors" />
+    <h3 className="text-xl font-bold text-slate-800 leading-none">{role}</h3>
+    <p className="text-cyan-600 font-semibold text-sm mt-2 mb-3 uppercase tracking-wider">{company} | {period}</p>
+    <p className="text-slate-600 text-sm leading-relaxed">{description}</p>
   </div>
 );
 
 const SkillTag = ({ name }: SkillTagProps) => (
-  <span className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium border border-emerald-100">
+  <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-[10px] font-bold border border-slate-200 uppercase tracking-tighter">
     {name}
   </span>
 );
 
-// --- PÁGINA PRINCIPAL ---
 export default function CVMarcela() {
   return (
-    <main className="min-h-screen bg-slate-50 py-12 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
+    <main className="min-h-screen bg-slate-50 py-10 px-4">
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-sm overflow-hidden border border-slate-200">
         
-        {/* Header / Hero */}
-        
-        <div className="bg-slate-900 text-white p-8 md:p-12 text-center md:text-left md:flex justify-between items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold">Marcela Lucabeche V.</h1>
-            <p className="text-emerald-400 text-xl mt-2 font-medium">Título Profesional / Especialidad</p>
-            <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start text-slate-300">
-              <span className="flex items-center gap-2"><Mail size={18}/> correo@ejemplo.com</span>
-              <span className="flex items-center gap-2"><MapPin size={18}/> Ciudad, País</span>
+        {/* HEADER ESTRATÉGICO */}
+        <div className="bg-slate-900 text-white p-10 md:flex justify-between items-start">
+          <div className="space-y-4">
+            <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-2">
+              Senior Supply Chain & Demand Planning
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
+              Marcela <span className="text-cyan-500">Lucabeche Vera</span>
+            </h1>
+            <p className="text-slate-400 text-lg font-light max-w-2xl leading-relaxed">
+              Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas. Actúo como puente estratégico entre Comercial, Operaciones y Finanzas[cite: 4, 5].
+            </p>
+            <div className="flex flex-wrap gap-6 pt-4 text-sm text-slate-400">
+              <span className="flex items-center gap-2"><Mail size={16} className="text-cyan-500"/> contacto@marcelalucabeche.cl</span>
+              <span className="flex items-center gap-2"><MapPin size={16} className="text-cyan-500"/> Santiago, Chile</span>
+              <span className="flex items-center gap-2"><Link size={16} className="text-cyan-500"/> /in/marcelalucabeche</span>
             </div>
           </div>
-          <div className="mt-8 md:mt-0"> 
+          <div className="mt-8 md:mt-0">
             <a 
-              href="/cv-marcela.pdf" 
-              download 
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-bold transition-colors"
+              href="/CV_MarcelaLucabecheV.pdf" 
+              download
+              className="group flex items-center gap-3 bg-white text-slate-900 px-6 py-4 rounded-none font-black uppercase text-sm hover:bg-cyan-500 transition-all shadow-[6px_6px_0px_0px_rgba(6,182,212,1)]"
             >
-              <FileText size={20}/> Descargar CV
+              <FileText size={20}/> Descargar CV Full <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform"/>
             </a>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 p-8 md:p-12">
-          {/* Columna Izquierda: Perfil y Skills */}
-          <div className="space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-emerald-500 pb-1 w-fit">Perfil</h2>
-              <p className="text-slate-600 leading-relaxed">
-                Breve descripción profesional de Marcela. Destaca sus años de experiencia, 
-                habilidades clave y lo que busca aportar a una empresa.
-              </p>
-            </section>
-
-<section>
-  <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-cyan-600 pb-1 w-fit text-sm uppercase tracking-tighter">Áreas de Expertise</h2>
-  <div className="space-y-4">
-    <div className="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
-      <h3 className="font-bold text-cyan-700 flex items-center gap-2"><BarChart3 size={18}/> Planning & S&OP</h3>
-      <p className="text-sm text-slate-600">Gestión de demanda, balance de carga y capacidad, procesos IBP.</p>
-    </div>
-    <div className="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
-      <h3 className="font-bold text-cyan-700 flex items-center gap-2"><Truck size={18}/> Supply Chain Ops</h3>
-      <p className="text-sm text-slate-600">Logística de última milla, gestión de almacenes y distribución nacional.</p>
-    </div>
-    <div className="bg-white p-4 rounded-lg border border-slate-100 shadow-sm">
-      <h3 className="font-bold text-cyan-700 flex items-center gap-2"><Globe2 size={18}/> Comercio Exterior</h3>
-      <p className="text-sm text-slate-600">Import/Export, gestión de agentes de aduana, Incoterms 2020.</p>
-    </div>
-  </div>
-</section>
+        {/* MÉTRICAS Y VALOR AGREGADO (KPIs) */}
+        <div className="bg-cyan-500 grid grid-cols-2 md:grid-cols-4 divide-x divide-cyan-600">
+          <div className="p-6 text-center">
+            <p className="text-3xl font-black text-slate-900">S&OP 2.0</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Liderazgo Regional </p>
           </div>
-
-          {/* Columna Derecha: Experiencia */}
-          <div className="md:col-span-2">
-            <section>
-              <h2 className="text-2xl font-bold text-slate-800 mb-6 border-b-2 border-emerald-500 pb-1 w-fit">Experiencia Laboral</h2>
-              
-              <ExperienceItem 
-                company="Empresa Actual"
-                role="Cargo Senior"
-                period="2022 - Presente"
-                description="Descripción de logros y responsabilidades principales de Marcela en este rol."
-              />
-
-              <ExperienceItem 
-                company="Empresa Anterior"
-                role="Cargo Intermedio"
-                period="2018 - 2021"
-                description="Resumen de tareas y proyectos liderados durante este periodo."
-              />
-            </section>
+          <div className="p-6 text-center">
+            <p className="text-3xl font-black text-slate-900">10+ Años</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Industria Crítica [cite: 4]</p>
+          </div>
+          <div className="p-6 text-center">
+            <p className="text-3xl font-black text-slate-900">6 Países</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Gestión de Clúster </p>
+          </div>
+          <div className="p-6 text-center">
+            <p className="text-3xl font-black text-slate-900">E2E</p>
+            <p className="text-[10px] text-slate-800 uppercase font-bold tracking-widest">Visión de Negocio [cite: 8]</p>
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="bg-slate-50 p-8 border-t border-slate-100 text-center text-slate-500 text-sm">
-          © 2026 Marcela [Apellido] - CV Profesional
+        <div className="grid md:grid-cols-12 gap-0">
+          {/* BARRA LATERAL: DOMINIO TÉCNICO */}
+          <div className="md:col-span-4 bg-slate-50 p-10 border-r border-slate-100">
+            <section className="mb-12">
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Core Expertise [cite: 54]</h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-white p-2 rounded shadow-sm"><BarChart3 size={18} className="text-cyan-600"/></div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 text-sm">S&OP / IBP</h4>
+                    <p className="text-xs text-slate-500 leading-tight">Gobernanza regional y toma de decisiones críticas basadas en datos.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-white p-2 rounded shadow-sm"><TrendingUp size={18} className="text-cyan-600"/></div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 text-sm">Demand Planning</h4>
+                    <p className="text-xs text-slate-500 leading-tight">Optimización del capital de trabajo y forecast de alta precisión.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-white p-2 rounded shadow-sm"><Globe2 size={18} className="text-cyan-600"/></div>
+                  <div>
+                    <h4 className="font-bold text-slate-800 text-sm">Foreign Trade</h4>
+                    <p className="text-xs text-slate-500 leading-tight">Sourcing internacional y cumplimiento normativo aduanero[cite: 14].</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Herramientas Clave [cite: 50, 52]</h2>
+              <div className="flex flex-wrap gap-2">
+                <SkillTag name="SAP (APO/SCM)" />
+                <SkillTag name="OMP" />
+                <SkillTag name="Power BI" />
+                <SkillTag name="Machine Learning" />
+                <SkillTag name="Excel Expert" />
+                <SkillTag name="SAC" />
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Educación </h2>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Diplomado 2024</p>
+                  <p className="text-xs font-bold text-slate-800">Product Management</p>
+                  <p className="text-[10px] text-slate-500 uppercase">U. de Chile</p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Ingeniería Comercial</p>
+                  <p className="text-xs font-bold text-slate-800">Mención Administración</p>
+                  <p className="text-[10px] text-slate-500 uppercase">USACH</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* COLUMNA PRINCIPAL: TRAYECTORIA IMPACTANTE */}
+          <div className="md:col-span-8 p-10 md:p-14">
+            <section className="mb-12">
+              <h2 className="text-2xl font-black text-slate-900 mb-10 flex items-center gap-3">
+                <GanttChart className="text-cyan-500" size={28}/> 
+                Trayectoria Destacada
+              </h2>
+              
+              <ExperienceItem 
+                role="Senior Planning Analyst / Cluster Lead"
+                company="Roche Chile / Ecolab"
+                period="2019 — 2024"
+                description="Liderazgo regional del proyecto S&OP 2.0 para el clúster sur (6 países). Optimización de forecasting mediante Machine Learning y SAP/APO, garantizando la salud financiera de inventarios críticos[cite: 31, 32]."
+              />
+
+              <ExperienceItem 
+                role="Gestor de Abastecimiento & Forecast"
+                company="Empack S.A."
+                period="2024 — 2025"
+                description="Integración de modelos B2B y B2C, reduciendo la incertidumbre operativa y alineando la operación logística con la necesidad del cliente final[cite: 17, 19]."
+              />
+
+              <ExperienceItem 
+                role="Consultora Senior Supply Chain"
+                company="Freelance Autónomo"
+                period="2025 — Actualidad"
+                description="Consultoría estratégica enfocada en precisión del forecast e integración comercial-operativa. Gestión técnica superior en sourcing internacional y reducción de costos logísticos[cite: 12, 14]."
+              />
+              
+              <ExperienceItem 
+                role="Encargada de Comercio Exterior"
+                company="Novaverde (Guallarauco)"
+                period="2011 — 2016"
+                description="Negociación global con proveedores internacionales y optimización integral de presupuestos anuales del departamento de importaciones[cite: 42, 43]."
+              />
+            </section>
+
+            {/* CALL TO ACTION FINAL */}
+            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 text-center">
+              <Boxes className="mx-auto text-cyan-500 mb-4" size={32} />
+              <h3 className="text-lg font-bold text-slate-800 mb-2">¿Buscas optimizar tu Cadena de Suministro?</h3>
+              <p className="text-sm text-slate-600 mb-6 max-w-md mx-auto">
+                Especialista en transformar datos complejos en decisiones de negocio rentables y procesos operativos fluidos[cite: 5, 8].
+              </p>
+              <div className="flex justify-center gap-4">
+                <a href="mailto:contacto@marcelalucabeche.cl" className="text-xs font-black uppercase tracking-widest text-cyan-600 hover:text-cyan-700 underline">Agendar Reunión</a>
+                <span className="text-slate-300">|</span>
+                <a href="/CV_MarcelaLucabecheV.pdf" className="text-xs font-black uppercase tracking-widest text-slate-800 hover:text-cyan-600">Ver Detalles Técnicos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FOOTER */}
+        <footer className="bg-slate-900 p-8 border-t border-slate-800 text-center">
+          <p className="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-bold">
+            © 2026 Marcela Lucabeche — Estrategia, Operaciones & S&OP 
+          </p>
         </footer>
       </div>
     </main>
