@@ -60,12 +60,17 @@ export default function CVMarcela() {
               Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas. Actúo como puente estratégico entre Comercial, Operaciones y Finanzas[cite: 4, 5].
             </p>
             <div className="flex flex-wrap gap-6 pt-4 text-sm text-slate-400">
-              <span className="flex items-center gap-2"><Mail size={16} className="text-cyan-500"/> contacto@marcelalucabeche.cl</span>
+              <span className="flex items-center gap-2"><Mail size={16} className="text-cyan-500"/> marce.lucabeche@gmail.com</span>
               <span className="flex items-center gap-2"><MapPin size={16} className="text-cyan-500"/> Santiago, Chile</span>
-              <span className="flex items-center gap-2"><Link size={16} className="text-cyan-500"/> /in/marcelalucabeche</span>
+              <span className="flex items-center gap-2"><Link size={16} className="text-cyan-500"/> https://www.linkedin.com/in/marcelalucabechev</span>
             </div>
           </div>
           <div className="mt-8 md:mt-0">
+            <img 
+              src="/MLV202604.jpeg" 
+              alt="Foto de Marcela Lucabeche" 
+              className="w-48 h-48 rounded-full object-cover border-4 border-cyan-500 shadow-lg"
+            /><br/>
             <a 
               href="/CV_MarcelaLucabecheV.pdf" 
               download
