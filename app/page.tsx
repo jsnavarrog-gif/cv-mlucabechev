@@ -51,7 +51,7 @@ export default function CVMarcela() {
         
         <div className="bg-slate-900 text-white p-8 md:p-12 text-center md:text-left md:flex justify-between items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold">Marcela [Apellido]</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">Marcela Lucabeche V.</h1>
             <p className="text-emerald-400 text-xl mt-2 font-medium">Título Profesional / Especialidad</p>
             <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start text-slate-300">
               <span className="flex items-center gap-2"><Mail size={18}/> correo@ejemplo.com</span>
