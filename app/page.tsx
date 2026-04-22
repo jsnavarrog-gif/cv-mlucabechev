@@ -53,11 +53,11 @@ export default function CVMarcela() {
             <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-2">
               Senior Supply Chain & Demand Planning
             </div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">
               Marcela <span className="text-cyan-500">Lucabeche Vera</span>
             </h1>
             <p className="text-slate-400 text-lg font-light max-w-2xl leading-relaxed">
-              Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas. Actúo como puente estratégico entre Comercial, Operaciones y Finanzas[cite: 4, 5].
+              Especialista con más de <span className="text-white font-medium">10 años de trayectoria</span> en industrias críticas. Actúo como puente estratégico entre Comercial, Operaciones y Finanzas.
             </p>
             <div className="flex flex-wrap gap-6 pt-4 text-sm text-slate-400">
               <span className="flex items-center gap-2"><Mail size={16} className="text-cyan-500"/> marce.lucabeche@gmail.com</span>
@@ -76,7 +76,7 @@ export default function CVMarcela() {
               download
               className="group flex items-center gap-3 bg-white text-slate-900 px-6 py-4 rounded-none font-black uppercase text-sm hover:bg-cyan-500 transition-all shadow-[6px_6px_0px_0px_rgba(6,182,212,1)]"
             >
-              <FileText size={20}/> Descargar CV Full <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform"/>
+              <FileText size={20}/> Descargar CV<ChevronRight size={18} className="group-hover:translate-x-1 transition-transform"/>
             </a>
           </div>
         </div>
