@@ -209,7 +209,7 @@ export default function CVMarcela() {
                 Especialista en transformar datos complejos en decisiones de negocio rentables y procesos operativos fluidos.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="mailto:contacto@marcelalucabeche.cl" className="text-xs font-black uppercase tracking-widest text-cyan-600 hover:text-cyan-700 underline">Agendar Reunión</a>
+                <a href="mailto:marce.lucabeche@gmail.com" className="text-xs font-black uppercase tracking-widest text-cyan-600 hover:text-cyan-700 underline">Agendar Reunión</a>
                 <span className="text-slate-300">|</span>
                 <a href="/CV_MarcelaLucabecheV.pdf" className="text-xs font-black uppercase tracking-widest text-slate-800 hover:text-cyan-600">Ver Detalles Técnicos</a>
               </div>
