@@ -173,10 +173,10 @@ export default function CVMarcela() {
               </h2>
               
               <ExperienceItem 
-                role="Senior Planning Analyst / Cluster Lead"
-                company="Roche Chile / Ecolab"
-                period="2019 — 2024"
-                description="Liderazgo regional del proyecto S&OP 2.0 para el clúster sur (6 países). Optimización de forecasting mediante Machine Learning y SAP/APO, garantizando la salud financiera de inventarios críticos."
+                role="Consultora Senior Supply Chain"
+                company="Freelance Autónomo"
+                period="2025 — Actualidad"
+                description="Consultoría estratégica enfocada en precisión del forecast e integración comercial-operativa. Gestión técnica superior en sourcing internacional y reducción de costos logísticos."
               />
 
               <ExperienceItem 
@@ -185,14 +185,14 @@ export default function CVMarcela() {
                 period="2024 — 2025"
                 description="Integración de modelos B2B y B2C, reduciendo la incertidumbre operativa y alineando la operación logística con la necesidad del cliente final."
               />
-
-              <ExperienceItem 
-                role="Consultora Senior Supply Chain"
-                company="Freelance Autónomo"
-                period="2025 — Actualidad"
-                description="Consultoría estratégica enfocada en precisión del forecast e integración comercial-operativa. Gestión técnica superior en sourcing internacional y reducción de costos logísticos."
-              />
               
+              <ExperienceItem 
+                role="Senior Planning Analyst / Cluster Lead"
+                company="Roche Chile / Ecolab"
+                period="2016 — 2024"
+                description="Liderazgo regional del proyecto S&OP 2.0 para el clúster sur (6 países). Optimización de forecasting mediante Machine Learning y SAP/APO, garantizando la salud financiera de inventarios críticos."
+              />
+
               <ExperienceItem 
                 role="Encargada de Comercio Exterior"
                 company="Novaverde (Guallarauco)"
