@@ -11,7 +11,7 @@ import {
   GanttChart,
   ChevronRight,
   FileText,
-  Boxes
+  Boxes, MessageCircle
 } from 'lucide-react';
 
 // --- INTERFACES ---
@@ -223,6 +223,18 @@ export default function CVMarcela() {
             © 2026 Marcela Lucabeche — Estrategia, Operaciones & S&OP 
           </p>
         </footer>
+
+      {/* WHATSAPP */}
+      <a
+        href="https://wa.me/56949347209?text=Hola%20Marcela,%20vi%20tu%20sitio%20y%20me%20gustaria%20conversar"
+        target="_blank"
+        className="fixed bottom-6 right-6 z-[110] bg-green-500 text-white p-3 md:p-4 rounded-full shadow-2xl border-2 border-white flex items-center justify-center group"
+      >
+        <MessageCircle size={24} />
+        <span className="absolute right-16 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
+          ¿Hablamos?
+        </span>
+      </a>
       </div>
     </main>
   );
