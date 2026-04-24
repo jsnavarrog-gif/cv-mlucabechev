@@ -160,6 +160,11 @@ export default function CVMarcela() {
                   <p className="text-xs font-bold text-slate-800">Mención Administración</p>
                   <p className="text-[10px] text-slate-500 uppercase">USACH</p>
                 </div>
+                <div>
+                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Técnico Superior</p>
+                  <p className="text-xs font-bold text-slate-800">Comercio Exterior</p>
+                  <p className="text-[10px] text-slate-500 uppercase">INACAP</p>
+                </div>
               </div>
             </section>
           </div>
