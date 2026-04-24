@@ -151,19 +151,19 @@ export default function CVMarcela() {
               <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-6">Educación </h2>
               <div className="space-y-3">
                 <div>
-                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Diplomado 2024</p>
-                  <p className="text-xs font-bold text-slate-800">Product Management</p>
-                  <p className="text-[10px] text-slate-500 uppercase">U. de Chile</p>
+                  <p className="text-[12px] font-bold text-cyan-600 uppercase">Diplomado 2024</p>
+                  <p className="text-[12px] font-bold text-slate-800">Product Management</p>
+                  <p className="text-[12px] text-slate-500 uppercase">U. de Chile</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Ingeniería Comercial</p>
-                  <p className="text-xs font-bold text-slate-800">Mención Administración</p>
-                  <p className="text-[10px] text-slate-500 uppercase">USACH</p>
+                  <p className="text-[12px] font-bold text-cyan-600 uppercase">Ingeniería Comercial</p>
+                  <p className="text-[12px] font-bold text-slate-800">Mención Administración</p>
+                  <p className="text-[12px] text-slate-500 uppercase">USACH</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-cyan-600 uppercase">Técnico Superior</p>
-                  <p className="text-xs font-bold text-slate-800">Comercio Exterior</p>
-                  <p className="text-[10px] text-slate-500 uppercase">INACAP</p>
+                  <p className="text-[12px] font-bold text-cyan-600 uppercase">Técnico Superior</p>
+                  <p className="text-[12px] font-bold text-slate-800">Comercio Exterior</p>
+                  <p className="text-[12px] text-slate-500 uppercase">INACAP</p>
                 </div>
               </div>
             </section>
